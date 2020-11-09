@@ -12,6 +12,9 @@ export const PortifolioContainer = styled.main`
         align-content: center;
         grid-gap: 20px;
         padding: 10px 20px;
+        @media(max-width: 320px){
+            padding: 5px;
+        }
         a{
             padding: 10px 15px;
             background: #FE3E57;

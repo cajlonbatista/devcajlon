@@ -11,27 +11,17 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   animation: spark 0.5s linear backwards;
-  
+  @media(max-width: 426px){
+    padding: 5px 10px;
+  }
   div:first-child {
-    img {
-      width: 35px;
-      margin-right: 15px;
-    }
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      transition: all 0.4s;
-      :hover {
-        opacity: 0.7;
-      }
-    }
-    h1 {
-      font-family: Nunito Sans, sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      color: white;
-    }
+   
+  }
+  article{
+    display: none;
+    @media(max-width: 669px){
+      display: block;
+    } 
   }
   div:last-child {
     a {
@@ -54,4 +44,26 @@ export const HeaderContainer = styled.header`
       display: none;
     }
   }
+`;
+
+export const Logo = styled.div`
+   img {
+      width: 35px;
+      margin-right: 15px;
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s;
+      :hover {
+        opacity: 0.7;
+      }
+    }
+    h1 {
+      font-family: Nunito Sans, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: white;
+    }
 `;

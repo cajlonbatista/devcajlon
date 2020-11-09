@@ -26,7 +26,7 @@ export const MainContainer = styled.main`
             font-family: Poppins, sans-serif;
             color: white;
             font-weight: 400;
-            font-size: 40px;
+            font-size: clamp(0.9rem, 1vw + 1.6rem, 2.2rem);
             animation: textin 0.6s linear backwards;
             padding-bottom: 10px;
         }
@@ -35,14 +35,17 @@ export const MainContainer = styled.main`
             font-family: Nunito Sans, sans-serif;
             font-weight: 100;
             animation: textin 0.4s linear backwards;
-            font-size: 24px;
             margin-bottom: 50px;
+            font-size: clamp(0.6rem, 1vw + 0.8rem, 1.5rem);
         }
         svg{
             position: absolute;
             bottom: 0;
             right: 0;
             width: 40%;
+            @media(max-width: 1000px){
+                display: none;
+            }
         }
     }    
     
