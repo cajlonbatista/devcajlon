@@ -113,12 +113,11 @@ class Main extends React.Component {
               fill="white"
             />
             <path
-            className='homecode'
+            className='home'
               d="M525.825 170.189L481.355 217.907L525.825 265.623L535.831 254.751L502.2 218.208L536.108 181.364L525.825 170.189Z"
               fill="#FE3E57"
             />
             <path
-            className='homecode'
               d="M591.419 170.189L635.888 217.907L591.419 265.623L581.413 254.751L615.043 218.208L581.135 181.364L591.419 170.189Z"
               fill="#FE3E57"
             />

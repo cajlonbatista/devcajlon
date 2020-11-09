@@ -42,6 +42,14 @@ const cards = [
     deploy: "https://guspad.vercel.app/",
   },
   {
+    title: "Guspad API",
+    img: guspad,
+    description:
+      "API para Plataforma Web com login integrado (Guspad), desenvolvida com Node.js e MongoDB.",
+    github: "https://github.com/cajlonbatista/guspad-api",
+    deploy: "https://guspad.herokuapp.com/",
+  },
+  {
     title: "Be The Woman",
     img: bethewoman,
     description:
@@ -145,7 +153,6 @@ function Portifolio() {
                     Readme
                   </a>
                 }
-                
               </CardActions>
             </Card>
           </ThemeProvider>
