@@ -1,0 +1,39 @@
+@keyframes shake {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes spark{
+  0%{
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes textin{
+  0%{
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  70%{
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.homecode{
+  animation: shake 2s infinite;
+}
