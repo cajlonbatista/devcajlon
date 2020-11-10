@@ -63,7 +63,7 @@ const Header = (props) => {
 
   return (
     <HeaderContainer>
-      <Logo onClick={toggleDrawer}>
+      <Logo>
         <Link to="/">
           <img src={logo}></img>
           <h1>Francisco Cajlon</h1>
