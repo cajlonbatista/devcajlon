@@ -63,7 +63,7 @@ const Header = (props) => {
 
   return (
     <HeaderContainer>
-      <Logo>
+      <Logo onClick={toggleDrawer}>
         <Link to="/">
           <img src={logo}></img>
           <h1>Francisco Cajlon</h1>
@@ -88,6 +88,13 @@ const Header = (props) => {
             </Link>
           </Logo>
           <List>
+          <a
+                    className={classes.links}
+                    onClick={toggleDrawer}
+                    href='https://docs.google.com/document/d/1hiHmgJcENhDFqHS3Q_ebxFG_C3YlcqazKXXJ9jyBzS8/edit?usp=sharing'
+                  >
+                    <ListItem button>Curriculum</ListItem>
+                  </a>
             {menu.map((item) => {
               if (location.pathname == item.path) {
                 return (
