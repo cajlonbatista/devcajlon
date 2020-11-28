@@ -8,12 +8,11 @@ import { Menu } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
 
 import logo from "../../global/assets/logo.svg";
-import treno from "../../global/assets/back.svg";
 
 const menu = [
   {
-    path: "/portifolio",
-    title: "Portfolio",
+    path: "/projects",
+    title: "Projects",
   },
   {
     path: "/work",
@@ -29,7 +28,6 @@ const useStyles = makeStyles({
   list: {
     width: 250,
     height: "100vh",
-    backgroundImage: `url(${treno})`,
     backgroundSize: "100%",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top center",
@@ -100,11 +98,11 @@ const Header = (props) => {
                 return (
                   <Link
                     className={classes.links}
-                    style={{ background: "#fe3e57" }}
+                    style={{ background: "#7a0d0d" }}
                     onClick={toggleDrawer}
                     to={item.path}
                   >
-                    <ListItem style={{ background: "#fe3e57", color: 'white' }} button>{item.title}</ListItem>
+                    <ListItem style={{ background: "#7a0d0d", color: 'white' }} button>{item.title}</ListItem>
                   </Link>
                 );
               } else {
@@ -126,7 +124,7 @@ const Header = (props) => {
         {menu.map((item) => {
           if (location.pathname == item.path) {
             return (
-              <Link style={{ background: "#fe3e57" }} to={item.path}>
+              <Link style={{ background: "#7a0d0d" }} to={item.path}>
                 {item.title}
               </Link>
             );

@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100vw;
-  background: #7e5dea;
   position: fixed;
   top: 0;
   z-index: 10;
   padding: 15px 20px;
   display: flex;
+  background: #000000;
   align-items: center;
   justify-content: space-between;
   animation: spark 0.5s linear backwards;
