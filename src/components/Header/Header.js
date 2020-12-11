@@ -15,12 +15,12 @@ const menu = [
     title: "Projects",
   },
   {
-    path: "/work",
-    title: "Work",
+    path: "/curriculum",
+    title: "Curriculum",
   },
   {
-    path: "/about",
-    title: "About",
+    path: "/contact",
+    title: "Contact",
   },
 ];
 
@@ -31,6 +31,7 @@ const useStyles = makeStyles({
     backgroundSize: "100%",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top center",
+    background: '#322f3d',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between'
@@ -39,9 +40,9 @@ const useStyles = makeStyles({
     width: "auto",
   },
   links: {
-    color: "#101010",
+    color: "#fff",
     textDecoration: "none",
-    fontFamily: "Nunito Sans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
   },
 });
 
@@ -52,7 +53,7 @@ const Header = (props) => {
   const [anchor, setAnchor] = React.useState(false);
 
   const toggleDrawer = () => {
-    if (anchor == false) {
+    if (anchor === false) {
       setAnchor(true);
     } else {
       setAnchor(false);
@@ -62,8 +63,8 @@ const Header = (props) => {
   return (
     <HeaderContainer>
       <Logo>
-        <Link to="/">
-          <img src={logo}></img>
+        <Link to='/'>
+          <img src={logo} alt='Francisco Cajlon'/>
           <h1>Francisco Cajlon</h1>
         </Link>
       </Logo>
@@ -79,30 +80,23 @@ const Header = (props) => {
         onOpen={toggleDrawer}
       >
         <div className={classes.list}>
-          <Logo style={{ padding: '20px'}}>
-            <Link to="/">
-              <img src={logo} style={{ width: 45}}></img>
-              <h1 style={{ fontSize: 18}}>Francisco Cajlon</h1>
+          <Logo style={{ padding: '20px' }}>
+            <Link to='/'>
+              <img src={logo} style={{ width: 45 }} alt='Francisco Cajlon'/>
+              <h1 style={{ fontSize: 18 }}>Francisco Cajlon</h1>
             </Link>
           </Logo>
           <List>
-          <a
-                    className={classes.links}
-                    onClick={toggleDrawer}
-                    href='https://docs.google.com/document/d/1hiHmgJcENhDFqHS3Q_ebxFG_C3YlcqazKXXJ9jyBzS8/edit?usp=sharing'
-                  >
-                    <ListItem button>Curriculum</ListItem>
-                  </a>
             {menu.map((item) => {
-              if (location.pathname == item.path) {
+              if (location.pathname === item.path) {
                 return (
                   <Link
                     className={classes.links}
-                    style={{ background: "#7a0d0d" }}
+                    style={{ background: "#5294E2" }}
                     onClick={toggleDrawer}
                     to={item.path}
                   >
-                    <ListItem style={{ background: "#7a0d0d", color: 'white' }} button>{item.title}</ListItem>
+                    <ListItem style={{ background: "#5294E2", fontSize: 14 }} button>{item.title}</ListItem>
                   </Link>
                 );
               } else {
@@ -112,7 +106,7 @@ const Header = (props) => {
                     to={item.path}
                     onClick={toggleDrawer}
                   >
-                    <ListItem button>{item.title}</ListItem>
+                    <ListItem style={{ fontSize: 14 }}  button>{item.title}</ListItem>
                   </Link>
                 );
               }
@@ -122,9 +116,9 @@ const Header = (props) => {
       </SwipeableDrawer>
       <div>
         {menu.map((item) => {
-          if (location.pathname == item.path) {
+          if (location.pathname === item.path) {
             return (
-              <Link style={{ background: "#7a0d0d" }} to={item.path}>
+              <Link style={{ background: "#5294E2" }} to={item.path}>
                 {item.title}
               </Link>
             );
@@ -132,12 +126,6 @@ const Header = (props) => {
             return <Link to={item.path}>{item.title}</Link>;
           }
         })}
-        <a
-          href="https://docs.google.com/document/d/1hiHmgJcENhDFqHS3Q_ebxFG_C3YlcqazKXXJ9jyBzS8/edit?usp=sharing"
-          target="_blank"
-        >
-          Curriculum
-        </a>
       </div>
     </HeaderContainer>
   );

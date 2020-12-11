@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo&family=Inter&family=Manrope&family=Open+Sans&family=Poppins&family=Syne+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
 
 @import url('./animations/animations.css');
-
-*, *::before, *::after{
+*, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-::selection{
+::selection {
     color: #000000;
-    background:white;
+    background: white;
 }
